@@ -436,6 +436,8 @@ class ApiClient:
 class MongoDBClient(ApiClient):
     def __init__(self, bot):
         mongo_uri = bot.config["connection_uri"]
+        database_name = os.getenv("CLIENTDATABASE", "modmail_bot")
+
         if mongo_uri is None:
             mongo_uri = bot.config["mongo_uri"]
             if mongo_uri is not None:
@@ -448,7 +450,7 @@ class MongoDBClient(ApiClient):
                 raise RuntimeError
 
         try:
-            db = AsyncIOMotorClient(mongo_uri).modmail_bot
+            db = AsyncIOMotorClient(mongo_uri)[database_name]
         except ConfigurationError as e:
             logger.critical(
                 "Your MongoDB CONNECTION_URI might be copied wrong, try re-copying from the source again. "
