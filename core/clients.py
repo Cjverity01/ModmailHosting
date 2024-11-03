@@ -2,6 +2,7 @@ import secrets
 import sys
 from json import JSONDecodeError
 from typing import Any, Dict, Union, Optional
+import os
 
 import discord
 from discord import Member, DMChannel, TextChannel, Message
@@ -14,7 +15,6 @@ from pymongo.errors import ConfigurationError
 from core.models import InvalidConfigError, getLogger
 
 logger = getLogger(__name__)
-
 
 class GitHub:
     """
