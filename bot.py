@@ -145,21 +145,21 @@ class ModmailBot(commands.Bot):
     def hosting_method(self) -> HostingMethod:
         # use enums
         if ".heroku" in os.environ.get("PYTHONHOME", ""):
-            return HostingMethod.CJSCOMMISIONS
+            return HostingMethod.HEROKU
 
         if os.environ.get("pm_id"):
-            return HostingMethod.CJSCOMMISIONS
+            return HostingMethod.PM2
 
         if os.environ.get("INVOCATION_ID"):
-            return HostingMethod.CJSCOMMISIONS
+            return HostingMethod.SYSTEMD
 
         if os.environ.get("USING_DOCKER"):
-            return HostingMethod.CJSCOMMISIONS
+            return HostingMethod.DOCKER
 
         if os.environ.get("TERM"):
-            return HostingMethod.CJSCOMMISIONS
+            return HostingMethod.SCREEN
 
-        return HostingMethod.CJSCOMMISIONS
+        return HostingMethod.OTHER
 
     def startup(self):
         logger.line()
