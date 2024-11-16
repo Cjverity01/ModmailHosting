@@ -336,7 +336,7 @@ class Utility(commands.Cog):
         embed.add_field(name="Latency", value=f"{self.bot.latency * 1000:.2f} ms")
         embed.add_field(name="Version", value=f"`{self.bot.version}`")
         embed.add_field(name="Authors", value="`kyb3r`, `Taki`, `fourjr`")
-        embed.add_field(name="Hosting Method", value=CJSCOMMISIONS)
+        embed.add_field(name="Hosting Method", value=self.bot.hosting_method.name)
 
         changelog = await Changelog.from_url(self.bot)
         latest = changelog.latest_version
@@ -353,9 +353,6 @@ class Utility(commands.Cog):
             name="Want Modmail in Your Server?",
             value="Follow the installation guide on [GitHub](https://github.com/modmail-dev/modmail/) "
             "and join our [Discord server](https://discord.gg/cnUpwrnpYb)!",
-            name="Cj's Commisions Hosting",
-            value="It's very easy to get a bot hosted by us you just join our discord server,open a ticket and tell us your bot token and we will do the rest!"
-            "You can join our discord server [Here](https://discord.gg/F9yPkvcTzY)!",
             inline=False,
         )
 
@@ -364,9 +361,6 @@ class Utility(commands.Cog):
             value="This bot is completely free for everyone. We rely on kind individuals "
             "like you to support us on [`Patreon`](https://patreon.com/kyber) (perks included) "
             "to keep this bot free forever!",
-            name="Want to test the bot?",
-            value="You can join our testing server and test out our bot! "
-            "Press [Here](https://discord.gg/3XfN8AnTRp) To join our testing server!",
             inline=False,
         )
 
