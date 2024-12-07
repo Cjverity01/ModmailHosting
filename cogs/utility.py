@@ -338,8 +338,8 @@ class Utility(commands.Cog):
         embed.add_field(name="Authors", value="`kyb3r`, `Taki`, `fourjr`")
         embed.add_field(name="Hosting Method", value="`CJSCOMMISIONS`")
         embed.add_field(name="Cj's Commisions Modmail Hosting",
-            value=f"Cj's Commisions Modmail Hosting"
-            "To get a modmail bot hosted by us join https://discord.gg/F9yPkvcTzY.",
+            value=f"Want this bot too?"
+            "To get a modmail bot hosted by us join: https://discord.gg/F9yPkvcTzY.",
             inline=False,
         )
 
@@ -353,14 +353,6 @@ class Utility(commands.Cog):
             footer = f"A newer version is available v{latest.version}."
         else:
             footer = "You are up to date with the latest version."
-
-
-
-        embed.add_field(
-            name="Project Sponsors",
-            value=f"Checkout the people who supported Modmail with command `{self.bot.prefix}sponsors`!",
-            inline=False,
-        )
 
         embed.set_footer(text=footer)
         await ctx.send(embed=embed)
