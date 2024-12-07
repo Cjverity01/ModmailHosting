@@ -337,11 +337,7 @@ class Utility(commands.Cog):
         embed.add_field(name="Version", value=f"`{self.bot.version}`")
         embed.add_field(name="Authors", value="`kyb3r`, `Taki`, `fourjr`")
         embed.add_field(name="Hosting Method", value="`CJSCOMMISIONS`")
-
-
-
-        embed.add_field(
-            name="Cj's Commisions Modmail Hosting",
+        embed.add_field(name="Cj's Commisions Modmail Hosting",
             value=f"Cj's Commisions Modmail Hosting"
             "To get a modmail bot hosted by us join https://discord.gg/F9yPkvcTzY.",
             inline=False,
