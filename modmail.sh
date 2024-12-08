@@ -1,3 +1,3 @@
 #!/bin/sh
-rm temp
+rm /temp
 pipenv run python3 bot.py
