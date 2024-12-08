@@ -1,4 +1,4 @@
 #!/bin/sh
 
 rm -rf temp/logs
-pipenv run python3 bot.py
+python3.10 -m pipenv run bot
